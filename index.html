@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>No AI Club</title>
+    <title>no-ai.club | Всем приветики!</title>
 
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>😡</text></svg>">
 
@@ -17,7 +17,8 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@500&display=swap" rel="stylesheet">
+
     <style>
         body {
             background-color: #f0f8ff; 
@@ -26,21 +27,50 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            font-family: 'Lobster', cursive;
             overflow: hidden;
         }
-        h1 {
-            font-size: clamp(2.5rem, 8vw, 5rem); 
-            color: #2c3e50;
+
+        .container {
             text-align: center;
             padding: 20px;
+        }
+
+        h1 {
+            font-family: 'Lobster', cursive;
+            font-size: clamp(2.5rem, 8vw, 5rem); 
+            color: #2c3e50;
             margin: 0;
+            line-height: 1.2;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 25px;
+            /* Прямой шрифт для ссылки */
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(1rem, 3vw, 1.5rem);
+            font-weight: 500;
+            letter-spacing: 1px; /* Немного «раздвинем» буквы для стиля */
+            color: #3498db;
+            text-decoration: none;
+            text-transform: uppercase; /* Сделаем ссылку капсом для строгости */
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent; /* Линия появится при наведении */
+            padding-bottom: 5px;
+        }
+
+        a:hover {
+            color: #2980b9;
+            border-bottom: 1px solid #2980b9;
         }
     </style>
 </head>
 <body>
 
-    <h1>Всем приветики в этом чатике!</h1>
+    <div class="container">
+        <h1>Всем приветики в этом чатике!</h1>
+        <a href="https://t.me/NoAIclub" target="_blank">t.me/NoAIclub</a>
+    </div>
 
 </body>
 </html>
