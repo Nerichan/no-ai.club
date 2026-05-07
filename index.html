@@ -9,31 +9,17 @@
 
     <meta name="title" content="Всем приветики в этом чатике!">
     <meta name="description" content="пупупу...">
-
-    <!-- Google/Schema.org -->
-    <meta itemprop="name" content="Всем приветики в этом чатике!">
-    <meta itemprop="description" content="пупупу...">
-    <meta itemprop="image" content="https://no-ai.club/og-image.png">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@leikabitch">
-    <meta name="twitter:creator" content="@leikabitch">
-    <meta name="twitter:title" content="Всем приветики в этом чатике!">
-    <meta name="twitter:description" content="пупупу...">
-    <meta name="twitter:image" content="https://no-ai.club/og-image.png">
-    <meta name="twitter:image:src" content="https://no-ai.club/og-image.png">
-    
-    <!-- Facebook Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://no-ai.club/">
     <meta property="og:title" content="Всем приветики в этом чатике!">
     <meta property="og:description" content="пупупу...">
     <meta property="og:image" content="https://no-ai.club/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://no-ai.club/og-image.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
 
     <style>
         body {
@@ -41,50 +27,104 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
-            overflow: hidden;
+            font-family: 'Montserrat', sans-serif;
         }
 
         .container {
             text-align: center;
             padding: 20px;
+            width: 100%;
+            max-width: 600px;
         }
 
         h1 {
             font-family: 'Lobster', cursive;
-            font-size: clamp(2.5rem, 8vw, 5rem); 
+            font-size: clamp(2rem, 7vw, 4rem); 
             color: #2c3e50;
-            margin: 0;
+            margin-bottom: 40px;
             line-height: 1.2;
         }
 
-        a {
-            display: inline-block;
-            margin-top: 25px;
-            /* Прямой шрифт для ссылки */
-            font-family: 'Montserrat', sans-serif;
-            font-size: clamp(1rem, 3vw, 1.5rem);
-            font-weight: 500;
-            letter-spacing: 1px; /* Немного «раздвинем» буквы для стиля */
-            color: #3498db;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            border-bottom: 1px solid transparent; /* Линия появится при наведении */
-            padding-bottom: 5px;
+        .links-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
         }
 
-        a:hover {
-            color: #2980b9;
-            border-bottom: 1px solid #2980b9;
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        /* Стили для блока TG */
+        .card-tg:hover { border-color: #3498db; }
+        /* Стили для блока Twitch */
+        .card-twitch:hover { border-color: #9146FF; }
+
+        .emoji {
+            font-size: 40px;
+            margin-right: 20px;
+        }
+
+        .text-content {
+            text-align: left;
+        }
+
+        .text-content span {
+            display: block;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: #2c3e50;
+        }
+
+        .text-content p {
+            margin: 5px 0 0;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 480px) {
+            .emoji { font-size: 30px; }
+            .text-content span { font-size: 1rem; }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1>Всем приветики в этом чатике!</h1>
-        <a href="https://t.me/NoAIclub" target="_blank">t.me/NoAIclub</a>
+        <h1>Всем приветики!</h1>
+        
+        <div class="links-wrapper">
+            <a href="https://t.me/NoAIclub" class="card card-tg" target="_blank">
+                <div class="emoji">😡</div>
+                <div class="content text-content">
+                    <span>No AI Club в Telegram</span>
+                    <p>База тут. Подписывайся!</p>
+                </div>
+            </a>
+
+            <a href="https://www.twitch.tv/hmmaiclub" class="card card-twitch" target="_blank">
+                <div class="emoji">🤔</div>
+                <div class="content text-content">
+                    <span>Twitch Стрим</span>
+                    <p>Заходи на трансляции, пупупу...</p>
+                </div>
+            </a>
+        </div>
     </div>
 
 </body>
